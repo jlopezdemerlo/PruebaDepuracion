@@ -11,8 +11,9 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        //un error tipo es utilizar un control de otra Actividad
+        //un error tipico es utilizar un control de otra Actividad
         btnBoton=(Button)findViewById(R.id.btnMainActivity);
+        //nos saldrá un error en esta línea
         btnBoton.setText("Boton Prueba Error");
     }
 }

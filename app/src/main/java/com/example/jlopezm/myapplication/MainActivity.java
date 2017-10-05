@@ -10,11 +10,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * Esta aplicación nos servirá para probar las diferentes funcionalidades del depurador
+ * de Android Studio
+ * @author : Jose Antonio López
+ *@version :1.0
+ */
+
 public class MainActivity extends AppCompatActivity {
     private final static String LOGTAG ="AplicacionDespuracion";
     String saludo="hola";
     ArrayList <String> lista;
-    Button btnBotonNuevaActivity;
+    Button btnBotonNuevaActivity,btnVerResultado;
     TextView tvPruebaCambioDatos;
 
     @Override
@@ -22,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tvPruebaCambioDatos=(TextView)findViewById(R.id.tvPruebaCambioDatos);
+        btnVerResultado=(Button)findViewById(R.id.btnVerResultado);
 
         cargarDatos();
         //tiene que fallar porque no hemos iniciado el boton
@@ -31,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,Main2Activity.class);
                 startActivity(intent);
+            }
+        });
+        btnVerResultado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String resultado="";
+                for (String temp:lista) {
+                    resultado=resultado+"-"+temp;
+                }
             }
         });
     }
