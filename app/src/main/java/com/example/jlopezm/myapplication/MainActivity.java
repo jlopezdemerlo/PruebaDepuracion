@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private final static String LOGTAG ="AplicacionDespuracion";
     String saludo="hola";
-    ArrayList <String> lista;
+    ArrayList <String> lista;//=new ArrayList<String>();
     Button btnBotonNuevaActivity,btnVerResultado;
     TextView tvPruebaCambioDatos;
 
@@ -44,12 +44,21 @@ public class MainActivity extends AppCompatActivity {
         btnVerResultado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String resultado="";
-                for (String temp:lista) {
-                    resultado=resultado+"-"+temp;
-                }
+                mostrarDatos();
             }
         });
+    }
+
+    /**
+     * muestras los datos en el TextView
+     *
+     */
+    private void mostrarDatos() {
+        String resultado="";
+        for (String temp:lista) {
+            resultado=resultado+"-"+temp;
+        }
+        tvPruebaCambioDatos.setText(resultado);
     }
 
     /**
