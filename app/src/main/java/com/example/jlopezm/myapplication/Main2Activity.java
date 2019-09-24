@@ -1,8 +1,10 @@
 package com.example.jlopezm.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Main2Activity extends AppCompatActivity {
     Button btnBoton;
