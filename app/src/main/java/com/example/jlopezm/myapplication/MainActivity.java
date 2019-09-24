@@ -20,7 +20,7 @@ import java.util.ArrayList;
  */
 
 public class MainActivity extends AppCompatActivity {
-    private final static String LOGTAG ="AplicacionDespuracion";
+    private final static String LOGTAG ="AplicacionDepuracion";
     String saludo="hola";
     ArrayList <String> lista;//=new ArrayList<String>();
     Button btnBotonNuevaActivity,btnVerResultado;
